@@ -3,13 +3,13 @@ const resolution = 5;
 
 const associations = {
     0: '@',
-    35: '%',
-    70: '#',
-    105: '&',
-    140: '(',
-    175: '/',
-    210: ',',
-    245: '.',
+    15: '%',
+    30: '#',
+    45: '&',
+    57: '(',
+    70: '/',
+    85: ',',
+    100: '.',
 }
 
 function setup() {
@@ -35,26 +35,26 @@ function draw() {
           let b = brightness(col);
           let character;
 
-          if(b >= 245) {
-            character = associations[245]
-          } else if(b >= 210) {
-            character = associations[210]
-          } else if(b >= 175) {
-            character = associations[175]
-          } else if(b >= 140) {
-            character = associations[140]
-          } else if(b >= 105) {
-            character = associations[105]
+          if(b >= 100) {
+            character = associations[100]
+          } else if(b >= 85) {
+            character = associations[85]
           } else if(b >= 70) {
             character = associations[70]
-          } else if(b >= 35) {
-            character = associations[35]
+          } else if(b >= 57) {
+            character = associations[57]
+          } else if(b >= 45) {
+            character = associations[45]
+          } else if(b >= 30) {
+            character = associations[30]
+          } else if(b >= 15) {
+            character = associations[15]
           } else {
             character = associations[0]
           }
           
           textSize(10)
-          text(character, i * 2, j * 2)
+          text(character, -i * 2 + width, j * 2)
         }
     }
 
